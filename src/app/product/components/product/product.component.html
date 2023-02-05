@@ -3,7 +3,7 @@
         <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
         <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
     </mat-card-header>
-    <div class="crop-image" *ngIf="product.images">
+    <div class="crop-image" *ngIf="product.images.length > 0">
         <img [src]="product.images[0]" alt="">
     </div>
     <mat-card-content>

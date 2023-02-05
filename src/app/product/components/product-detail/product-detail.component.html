@@ -1,5 +1,5 @@
 <div *ngIf="product">
-    <div>
+    <div *ngIf="product.images.length > 0">
         <img [src]="product.images[0]" alt="">
     </div>
     <div>
