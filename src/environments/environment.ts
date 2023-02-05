@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_api: 'https://platzi-store.herokuapp.com',
+  url_api: 'https://young-sands-07814.herokuapp.com/api',
   firebase: {
     apiKey: 'AIzaSyCJtTYxK32k0QBus48vGLs5VpaICbVticY',
     authDomain: 'curso-angular-pwa.firebaseapp.com',

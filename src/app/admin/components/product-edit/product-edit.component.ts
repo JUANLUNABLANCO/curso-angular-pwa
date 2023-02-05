@@ -14,7 +14,7 @@ import { ProductsService } from './../../../core/services/products/products.serv
 export class ProductEditComponent implements OnInit {
 
   form: FormGroup;
-  id: string;
+  id: number;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -27,7 +27,7 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params) => {
-      this.id = params.id;
+      this.id = parseInt(params.id);
       this.productsService.getProduct(this.id)
       .subscribe(product => {
         this.form.patchValue(product);

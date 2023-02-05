@@ -18,7 +18,7 @@ export class ProductsService {
     return this.http.get<Product[]>(`${environment.url_api}/products`);
   }
 
-  getProduct(id: string) {
+  getProduct(id: number) {
     return this.http.get<Product>(`${environment.url_api}/products/${id}`);
   }
 
@@ -26,11 +26,11 @@ export class ProductsService {
     return this.http.post(`${environment.url_api}/products`, product);
   }
 
-  updateProduct(id: string, changes: Partial<Product>) {
+  updateProduct(id: number, changes: Partial<Product>) {
     return this.http.put(`${environment.url_api}/products/${id}`, changes);
   }
 
-  deleteProduct(id: string) {
+  deleteProduct(id: number) {
     return this.http.delete(`${environment.url_api}/products/${id}`);
   }
 }
