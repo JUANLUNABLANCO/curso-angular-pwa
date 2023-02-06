@@ -9,47 +9,50 @@ interface Token {
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent
+// implements OnInit
+{
 
-  private tokensCollections: AngularFirestoreCollection<Token>;
 
-  constructor(
-    private swUpdate: SwUpdate,
-    private messaging: AngularFireMessaging,
-    private database: AngularFirestore
-  ) {
-    this.tokensCollections = this.database.collection<Token>('tokens');
-  }
+  // private tokensCollections: AngularFirestoreCollection<Token>;
 
-  ngOnInit() {
-    this.updatePWA();
-    this.requestPermission();
-    this.listenNotifications();
-  }
+  // constructor(
+  //   private swUpdate: SwUpdate,
+  //   private messaging: AngularFireMessaging,
+  //   private database: AngularFirestore
+  // ) {
+  //   this.tokensCollections = this.database.collection<Token>('tokens');
+  // }
 
-  updatePWA() {
-    this.swUpdate.available
-    .subscribe(value => {
-      console.log('update:', value);
-      window.location.reload();
-    });
-  }
+  // ngOnInit() {
+  //   this.updatePWA();
+  //   this.requestPermission();
+  //   this.listenNotifications();
+  // }
 
-  requestPermission() {
-    this.messaging.requestToken
-    .subscribe(token => {
-      console.log(token);
-      this.tokensCollections.add({token});
-    });
-  }
+  // updatePWA() {
+  //   this.swUpdate.available
+  //   .subscribe(value => {
+  //     console.log('update:', value);
+  //     window.location.reload();
+  //   });
+  // }
 
-  listenNotifications() {
-    this.messaging.messages
-    .subscribe(message => {
-      console.log(message);
-    });
-  }
+  // requestPermission() {
+  //   this.messaging.requestToken
+  //   .subscribe(token => {
+  //     console.log(token);
+  //     this.tokensCollections.add({token});
+  //   });
+  // }
+
+  // listenNotifications() {
+  //   this.messaging.messages
+  //   .subscribe(message => {
+  //     console.log(message);
+  //   });
+  // }
 }
