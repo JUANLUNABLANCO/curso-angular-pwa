@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  title = 'platzi-store';
+  title = 'curso-angular-pwa';
 
   items = ['nicolas', 'julian', 'perez'];
 

@@ -26,7 +26,7 @@
     }],
     "dataGroups": [{
         "name": "api",
-        "urls": ["https://platzi-store.herokuapp.com/**"],
+        "urls": ["https://young-sands-07814.herokuapp.com/api/**"],
         "cacheConfig": {
             "maxSize": 3,
             "maxAge": "5m",
