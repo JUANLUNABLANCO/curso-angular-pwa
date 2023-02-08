@@ -7,13 +7,12 @@ importScripts('https://www.gstatic.com/firebasejs/7.6.0/firebase-messaging.js');
 // Initialize the Firebase app in the service worker by passing in the
 // messagingSenderId.
 firebase.initializeApp({
-    apiKey: 'AIzaSyCJtTYxK32k0QBus48vGLs5VpaICbVticY',
-    authDomain: 'curso-angular-pwa.firebaseapp.com',
-    databaseURL: 'https://curso-angular-pwa.web.app',
-    projectId: 'curso-angular-pwa',
-    storageBucket: 'curso-angular-pwa.appspot.com',
-    messagingSenderId: '735057917032',
-    appId: '1:735057917032:web:6e4bdf54a2fd72529537dd'
+    apiKey: "AIzaSyCJtTYxK32k0QBus48vGLs5VpaICbVticY",
+    authDomain: "curso-angular-pwa.firebaseapp.com",
+    projectId: "curso-angular-pwa",
+    storageBucket: "curso-angular-pwa.appspot.com",
+    messagingSenderId: "735057917032",
+    appId: "1:735057917032:web:6e4bdf54a2fd72529537dd"
 });
 
 // Retrieve an instance of Firebase Messaging so that it can handle background
